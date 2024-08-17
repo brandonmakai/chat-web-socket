@@ -28,5 +28,5 @@ func main() {
 		fmt.Printf("There was an error connecting to the server: %v", err)
 	}
 
-	go sendAndReceive(conn)
+	sendAndReceive(conn)
 }

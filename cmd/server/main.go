@@ -24,11 +24,11 @@ func handleConnection(conn net.Conn) {
 		// Read a line from the connection
 		message, err = r.ReadString('\n')
 		if err != nil {
-			fmt.Printf("Error receiving messages: %v\n", e)
+			fmt.Printf("Error receiving messages: %v\n", err)
 			return
 		}
 
-		fmt.Printf("Received %s\n", message)
+		fmt.Printf("Received: %s\n", message)
 
 		response := "Message: " + message
 
